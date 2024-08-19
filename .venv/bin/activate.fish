@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/bethcartrette/VS_CODE/automate_extract_api_docs_to_markdown/.venv"
+set -gx VIRTUAL_ENV "/Users/bethcartrette/VS_CODE/Convert-URL-or-PDF-to-Markdown/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

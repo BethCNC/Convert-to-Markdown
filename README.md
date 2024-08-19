@@ -1,59 +1,69 @@
-# Hello There!
+# Convert URL or PDF to Markdown
 
-Congrats on starting up a new project in VS Code using Python and GitHub for version control. You are almost ready to create your amazing new script. There are just a couple of things to do before you start writing your code.
+## Overview
 
-## 1. Activate Your Virtual Environment
+This project provides a tool to convert URLs into Markdown files. The primary purpose is to use these Markdown files for training language models, making it easier to work with structured and easily accessible content. The best use case for this tool is converting online tutorials and articles into Markdown format, which can then be used as training data for custom language models.
 
-Before you begin coding, activate your virtual environment with this command:
+## Features
 
-source venv/bin/activate
+- **Convert URLs to Markdown:** Extracts the main content of a webpage and converts it into a well-formatted Markdown file.
+- **PDF Support:** (Note: PDF handling is not yet implemented in this version.)
 
-This ensures that any packages you install are scoped to this project only.
+## Usage
 
-## 2. Add and Install Dependencies
+1. **Clone the Repository:**
 
-If your project requires specific Python packages, add them to `requirements.txt` and then install them using the following command:
+   ```bash
+   git clone https://github.com/BethCNC/Convert-to-Markdown.git
+   ```
 
-pip install -r requirements.txt
+2. **Navigate to the Project Directory:**
 
-**Tip:** Whenever you add new dependencies, update `requirements.txt` with the following command:
+   ```bash
+   cd Convert-to-Markdown
+   ```
 
-pip freeze > requirements.txt
+3. **Set Up the Virtual Environment:**
 
-This keeps your project dependencies consistent.
+   Create and activate a virtual environment:
 
-## 3. Create a Git Repository and Make Your First Push
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-If you haven't connected your project to a remote Git repository (e.g., GitHub), follow these steps:
+4. **Install Required Packages:**
 
-**Make sure you replace 'yourrepositoryname' with the actual name of your GitHub repository.**
+   Install the dependencies listed in `requirements.txt`:
 
-1. Create the repository on GitHub (if you haven't done so already).
-2. Set the remote URL and push your code:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-git remote add origin https://github.com/bethcnc/###ADDPROJECTNAME###.git
-git push -u origin master
+5. **Run the Script:**
 
-## 4. Add API Keys and Secret Codes to `.env`
+   Use the following command to run the script and convert a URL or PDF to Markdown:
 
-For any sensitive information like API keys and secret codes, use the `.env` file. Make sure not to commit this file to version control:
+   ```bash
+   python3 src/convert_to_markdown.py
+   ```
 
-**Here is the link to obtain an API Key for Open AI: [OpenAI API Keys](https://platform.openai.com/api-keys)**
+   - You will be prompted to provide a URL or PDF file path.
+   - If you select a URL, the tool will extract the content and save it as a Markdown file.
 
-# Example .env file
-API_KEY=your_api_key
-SECRET_KEY=your_secret_key
+## Example Use Case
 
-## 5. Start Coding Your Innovative Script!
+The tool is particularly useful for converting online tutorials and articles into Markdown format. For example, you might want to convert a multi-part tutorial on Python programming into Markdown files that can be used to train a language model to provide accurate and contextual responses related to the tutorial's content.
 
-Now you're ready to create an innovative script to make your life easier with Python. Happy coding!
+## Future Enhancements
 
-## **Remember:**
+- **PDF Handling:** The ability to convert PDF documents into Markdown is planned for a future release.
+- **Content Filtering:** More advanced content filtering and formatting options for more customizable Markdown output.
 
-- **Regularly Push to GitHub**: After making significant changes to your code, make sure to commit and push them to your GitHub repository.
-- **Document Your Code**: Maintain good documentation to help you or others understand your code later.
-- **Test Your Code**: Write tests to ensure your code works as expected, especially as it grows.
+## Contributing
 
----
+Feel free to fork this repository and submit pull requests for any enhancements or fixes.
 
-You’re all set! Best of luck with your project.
+## License
+
+This project is licensed under the MIT License.

@@ -1,4 +1,4 @@
-#!/Users/bethcartrette/VS_CODE/automate_extract_api_docs_to_markdown/.venv/bin/python
+#!/Users/bethcartrette/VS_CODE/Convert-URL-or-PDF-to-Markdown/.venv/bin/python3.12
 """A command line tool for extracting text and images from PDF and
 output it to plain text, html, xml or tags."""
 import argparse
