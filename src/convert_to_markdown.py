@@ -80,15 +80,27 @@ def url_to_markdown(url):
     else:
         print("Failed to fetch HTML content.")
 
+def txt_to_markdown(txt_path):
+    """Convert a .txt file to markdown."""
+    if os.path.exists(txt_path):
+        with open(txt_path, 'r') as file:
+            content = file.read()
+            markdown_content = format_to_markdown(content)
+            sanitized_title = sanitize_filename(os.path.splitext(os.path.basename(txt_path))[0])
+            output_file = os.path.join(os.getcwd(), f"{sanitized_title}.md")
+            save_markdown(markdown_content, output_file)
+    else:
+        print("The specified .txt file does not exist.")
+
 def main():
-    choice = input("Enter 'url' to provide a URL or 'pdf' to provide a PDF file path: ").strip().lower()
+    choice = input("Enter 'url' to provide a URL or 'txt' to provide a .txt file path: ").strip().lower()
 
     if choice == 'url':
         url = input("Please enter the URL: ").strip()
         url_to_markdown(url)
-    elif choice == 'pdf':
-        pdf_path = input("Please enter the PDF file path: ").strip()
-        print("PDF handling not implemented in this enhanced version.")
+    elif choice == 'txt':
+        txt_path = input("Please enter the .txt file path: ").strip()
+        txt_to_markdown(txt_path)
     else:
         print("Invalid choice. Exiting.")
 
